@@ -4,6 +4,7 @@
 	desc = "A face-covering mask that can be connected to an air supply. Filters harmful gases from the air."
 	icon_state = "gas_alt"
 	item_state = "gas_alt"
+	blood_overlay_type = "gasmask"
 	icon = 'icons/obj/items/clothing/masks/gasmasks.dmi'
 	item_icons = list(
 		WEAR_FACE = 'icons/mob/humans/onmob/clothing/masks/gasmasks.dmi',
@@ -57,6 +58,11 @@
 	flags_inventory = COVERMOUTH|ALLOWINTERNALS|BLOCKGASEFFECT|ALLOWREBREATH
 	flags_inv_hide = HIDEEARS|HIDEFACE|HIDEALLHAIR
 	flags_equip_slot = SLOT_FACE
+
+/obj/item/clothing/mask/gas/pmc/Initialize()
+	. = ..()
+	if(istypestrict(src, /obj/item/clothing/mask/gas/pmc) || istypestrict(src, /obj/item/clothing/mask/gas/pmc/leader))
+		AddElement(/datum/element/corp_label/wy)
 
 /obj/item/clothing/mask/gas/pmc/marsoc
 	name = "\improper SOF armored balaclava"

@@ -17,7 +17,7 @@
 	ambience_exterior = FALSE
 	requires_power = FALSE
 	is_resin_allowed = FALSE
-	flags_area = AREA_NOTUNNEL|AREA_UNWEEDABLE
+	flags_area = AREA_NOBURROW|AREA_UNWEEDABLE
 	ceiling = CEILING_MAX
 
 //////////////////////////////////////////
@@ -139,11 +139,22 @@
 /area/strata/exterior/tcomms_mining_caves
 	name = "Mining Pathway Relay"
 	icon_state = "tcomms1"
-
 /area/strata/exterior/tcomms_vehicle_yard
 	name = "Vehicle Yard Relay"
 	icon_state = "tcomms1"
 	linked_lz = DROPSHIP_LZ2
+
+/area/strata/exterior/tcomms_geosprings
+	name = "Geothermal Springs Relay"
+	icon_state = "tcomms1"
+
+/area/strata/exterior/tcomms_crashed_dropship
+	name = "Crashed Dropship Relay"
+	icon_state = "tcomms1"
+
+/area/strata/exterior/tcomms_engineering_parts_storage
+	name = "Engineering - Parts Storage Platform Relay"
+	icon_state = "tcomms1"
 
 //-Outpost
 
@@ -531,7 +542,7 @@
 	icon_state = "marshwater"
 	requires_power = FALSE
 	is_resin_allowed = FALSE
-	flags_area = AREA_NOTUNNEL|AREA_UNWEEDABLE
+	flags_area = AREA_NOBURROW|AREA_UNWEEDABLE
 
 // CLF Insert
 
